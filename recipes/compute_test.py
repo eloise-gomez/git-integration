@@ -23,7 +23,7 @@ test_df = orders_2_df
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
 # Dataset processed_data renamed to t_shirt_data by neba.nfonsang on 2024-09-16 20:58:07
-processed_dataset = dataiku.Dataset("t_shirt_data")
+processed_dataset = dataiku.Dataset("test")
 processed_dataset.write_with_schema(processed_dataset_df)
 
 
