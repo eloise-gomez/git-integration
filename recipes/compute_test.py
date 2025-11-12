@@ -12,7 +12,19 @@ orders_2_df = orders_2.get_dataframe()
 # TODO: Replace this part by your actual code that computes the output, as a Pandas dataframe
 # NB: DSS also supports other kinds of APIs for reading and writing data. Please see doc.
 
-test_df = orders_2_df # For this sample code, simply copy input to output
+orders_2_df['total'] = orders_2_df['tshirt_price'] * orders_2_df['tshirt_quantity']
+
+# update text category description
+orders_2_df['tshirt_category'] = orders_2_df['tshirt_category'].str.replace('Wh ', 'White ')
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+test_df = orders_2_df
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+# Write recipe outputs
+# Dataset processed_data renamed to t_shirt_data by neba.nfonsang on 2024-09-16 20:58:07
+processed_dataset = dataiku.Dataset("t_shirt_data")
+processed_dataset.write_with_schema(processed_dataset_df)
 
 
 # Write recipe outputs
