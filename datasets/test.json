@@ -76,6 +76,8 @@
       {"name":"tshirt_price","type":"double"},
       {"name":"tshirt_quantity","type":"bigint"},
       {"name":"total","type":"double"},
+
+      {"name":"total_benoit","type":"double"}
       {"name":"total_elo","type":"double"}
     ],
     "userModified": false
