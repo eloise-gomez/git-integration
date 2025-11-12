@@ -13,6 +13,8 @@ orders_2_df = orders_2.get_dataframe()
 # NB: DSS also supports other kinds of APIs for reading and writing data. Please see doc.
 
 orders_2_df['total'] = orders_2_df['tshirt_price'] * orders_2_df['tshirt_quantity']
+orders_2_df['total_elo'] = orders_2_df['tshirt_price'] * orders_2_df['tshirt_quantity'] * 100
+
 
 # update text category description
 orders_2_df['tshirt_category'] = orders_2_df['tshirt_category'].str.replace('Wh ', 'White ')
