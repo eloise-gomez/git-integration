@@ -24,7 +24,7 @@ test_df = orders_2_df
 # Write recipe outputs
 # Dataset processed_data renamed to t_shirt_data by neba.nfonsang on 2024-09-16 20:58:07
 processed_dataset = dataiku.Dataset("test")
-processed_dataset.write_with_schema(processed_dataset_df)
+processed_dataset.write_with_schema(test_df)
 
 
 # Write recipe outputs
